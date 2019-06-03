@@ -23,12 +23,11 @@ spec:
               path: /
               port: 9080
               scheme: HTTP
+            initialDelaySeconds: 40
           readinessProbe:
             httpGet:
               path: /hello-world/resources/hello
               port: 9080
               scheme: HTTP
-            initialDelaySeconds: 40
-      imagePullSecrets:
-      - name: regsecret
+            initialDelaySeconds: 60
       restartPolicy: Always
